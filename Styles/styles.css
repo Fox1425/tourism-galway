@@ -9,6 +9,9 @@ body{
     background-size: cover;
     position: relative;
 }
+a:hover{
+    color: rgb(8, 90, 8);
+}
 /* ***********************************Homepage************************************** */
 
 /*------------------- header section ---------------------------------------*/
@@ -42,6 +45,25 @@ img.logo{
 }
 .navigation-links a:hover{
     color: green;
+}
+
+@media screen and (max-width: 768px) {
+    .banner {
+        flex-direction: column;
+    }
+
+    img.logo {
+        margin-bottom: 10px;
+    }
+
+    .navigation-links {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .navigation-links li {
+        margin-bottom: 5px;
+    }
 }
 
 
@@ -244,7 +266,7 @@ img.logo{
 
 .circle:hover ~ .description-box {
     opacity: 1;
-    transform: translateY(0);
+    transform: translateY(40px);
 }
 
 .description-box h3 {
@@ -292,6 +314,11 @@ img.logo{
     margin-left: 10px;
 }
 
+.description h3{
+    text-align: center;
+    text-decoration: solid underline;
+}
+
 .overlay {
     position: absolute;
     top: 0;
@@ -308,6 +335,126 @@ img.logo{
 .attraction:hover .overlay {
     opacity: 1;
 }
+
+/* **************************Shopping List****************** */
+
+.main-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+}
+
+
+.tour-container {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin: 20px 80px 80px 80px;
+    position: relative;
+}
+
+.tour-item {
+    width: 45%;
+    margin-bottom: 20px;
+    border: 2px solid #fff;
+    padding: 20px;
+    background-color: rgb(62, 1, 1);
+    
+}
+
+.tour-item img {
+    width: 100%;
+    height: auto;
+}
+
+.tour-item h3{
+    color: #fff;
+    text-decoration: solid underline;
+}
+
+.select-button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+    font-weight: bold;
+}
+
+.select-button:hover{
+    color: green;
+}
+
+.tour-item .tour-description {
+    margin-top: 10px;
+    color: #fff;
+}
+
+.tour-item .tour-quantity {
+    margin-top: 10px;
+    margin-right: 20px;
+    color: #fff;
+    text-decoration: solid;
+}
+
+.tour-item .price {
+    margin-top: 10px;
+    color: #fff;
+    text-decoration: solid underline;
+}
+
+
+.total-section {
+    position: relative;
+    margin: 40px;
+    border: 2px solid #fff;
+    padding: 30px;
+    background-color: rgb(62, 1, 1);
+    text-align: center;
+    
+}
+
+.total-section h2{
+    color: #fff;
+    text-decoration: solid underline;
+
+}
+
+.total-section .total {
+    font-weight: bold;
+    margin: 10px;
+    color: #fff;
+}
+
+.total-section span{
+    color: #fff;
+}
+
+.total-section .item {
+    align-items: center;
+    margin-bottom: 10px;
+}
+
+.total-section .item .quantity-select {
+    margin-left: 20px;
+}
+
+.total-section .item button {
+    background-color: transparent;
+    border: none;
+    color: white;
+    cursor: pointer;
+    text-decoration: underline;
+    margin-left: 20px;
+    font-weight: bold;
+}
+.total-section .item button:hover{
+    color: green;
+}
+
 
 /* ************************Contact us****************** */
 
@@ -370,13 +517,13 @@ img.logo{
 
 .contact-section {
     max-width: 500px;
-    margin: 50px;
+    margin: 100px;
     padding: 20px;
     border: 2px solid #ccc;
     border-radius: 5px;
     background-color: rgb(62, 1, 1);
     color: #fff;
-    display: flex;
+    /* display: flex; */
     float: right;
 }
 
@@ -405,18 +552,60 @@ img.logo{
 }
 
 .social-media li {
-    margin-right: 10px;
+    margin-right: 40px;
+    margin-top: 5px;
+    display: inline-flex;
+    flex-direction: row;
+    flex-wrap: wrap;
 }
 
 .social-media a {
     display: block;
     width: 30px;
     height: 30px;
-    background-color: #ccc;
+    /* background-color: #0019fb; */
     border-radius: 50%;
     text-align: center;
     line-height: 30px;
     color: #fff;
+    text-decoration: solid;
+}
+.facebook{
+    background-color: rgb(2, 2, 228);
+}
+.twitter{
+    background-color: rgb(0, 191, 255);
+}
+.instagram{
+    background-color: rgb(98, 0, 98);
 }
 
-/* **************************Accomodation Page****************** */
+/* .social-media-word{
+    float: right;
+    list-style: none;
+    text-decoration: solid;
+} */
+.social-media-word {
+    list-style: none;
+    text-decoration: solid;
+    display: flex;
+    align-items: center;
+    margin-left: 5px;
+}
+.social-media-word li {
+    margin-right: 10px;
+}
+
+.instagram-word:hover{
+    color: green;
+}
+
+
+.twitter-word:hover{
+    color: green;
+}
+
+.facebook-word:hover{
+    color: green;
+}
+
