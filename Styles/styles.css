@@ -101,6 +101,8 @@ img.logo{
 /* -----------------------history --------------- */
 
 .history{
+    opacity: 0;
+    transform: translateX(-100%);
     display: block;
     text-align: center;
     color: aliceblue;
@@ -108,8 +110,25 @@ img.logo{
     border: 2px aliceblue solid;
     border-radius: 40px;
     margin: 5px 10px 40px 10px;
+    animation-name: slideIn;
+    animation-duration: 7s;
+    animation-delay: 1s;
+    animation-fill-mode: forwards;
 
 }
+
+
+@keyframes slideIn {
+    0% {
+      opacity: 0;
+      transform: translateX(-100%); /* Start from the left */
+    }
+    100% {
+      opacity: 1;
+      transform: translateX(0); /* Move to the original position */
+    }
+}
+
 .history h2{
     text-decoration: underline solid;
 }
